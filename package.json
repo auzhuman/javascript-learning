@@ -1,0 +1,22 @@
+{
+  "name": "js_prac",
+  "version": "1.0.0",
+  "description": "\"This is my first javascript project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/humanauz063092/js-practice-session-kishorsir.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/humanauz063092/js-practice-session-kishorsir/issues"
+  },
+  "homepage": "https://gitlab.com/humanauz063092/js-practice-session-kishorsir#readme"
+}

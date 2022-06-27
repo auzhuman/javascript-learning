@@ -1,0 +1,155 @@
+                                                                      15 मई 2022 02:48:54 अपराह्न 
+
+---------------types of error in js------------------------
+
+Syntax Error = Error in Syntax
+Refrence Error = memory allocation but no value == undefined
+TypeError = misinterpretation of types  
+
+---------------Varaiables/Objects Declaration--------------
+
+var VariableName = {
+
+Name : "Human",
+Age : 20,
+Height :5.5
+
+}
+----------------Operation Inside an Object------------------
+1.adding paramaeters into the object
+ VariableName.RollNo = 15
+2.delete a parameter
+ delete VariableName.Height
+
+
+----------------functions----------------- 
+1.Expression Syntax
+   var NameofFunction = function(){//parameters}
+   //calling before declaration gives TypeError
+2.Declaration Syntax 
+  function FunctionName (){//prameters}
+  //calling before declaration has no error,this is due to Hoisting;
+  //Hoisting = Hoisting in js moves all the Declaration to the top of the code before      execution.
+  Declaration of varaiable also moves it to the top but only the name of varaible not assigned value
+  
++++++++++++++++++Type of Function++++++++++++++++++++++
+1.Named Function ==> Function with Name
+2.Unnamed Function ==> Anonymous without name
+     function(){} //most used.
+3.Function With Arguments ==>
+     i.//single
+     function Welcome (parameters){ 
+       var text = "welcome " + parameters +  "to js ";
+     }
+     Welcome(args)
+     
+     ii.//double args
+     
+     function College(course,name){
+     var text = "This course" + course "is offered to " + name;
+     }
+     College("Computer","Ram")
+     College(_,"Ram")
+     College(NULL,"Ram")
+     
+     iii.//triple or more args then use single args
+     function sendMail(to,from,subject,message){}
+     OR
+     function mail (details){use var.to to access}
+     
+     var maildata = {
+       to : "ram@gmail.com",
+       from : "hero@gmail.com",
+       subject : "Sick Leave" ,
+       message : "message"
+      }
+     mail(mailData);
+     
+4.Function with Return Type ==> return value and end.using return
+                                for mutiple value use array or objects
+                                
+                                return {a : ram, b : 3000}  
+                                
+5.IIFE(immeditately invocked functional expression)
+  ()() --(functionname)()--->calls
+  can be used to call anonynmous function 
+  //call operation
+  (function(){//prarmaters})()
+  
+  //with args
+   //call operation
+  (function(param){//prarmaters + para})("args")
+  
+  
+-----------✌️✌️✌️✌️✌️✌️✌️✌️✌️✌️-----SCOPE-----✌️✌️✌️✌️✌️✌️✌️✌️✌️✌️-----------
+--> accessibility of application data<--
+1.Global Scope
+ Throughout the file accessible application data:declared at outermost layer
+
+2.Local Scope (Functional Scope)
+ inside a functional unit:only accessibile inside a function.
+ 
+ if var keyword is not used while declaring variable inside a function it replaces previous one and it is a global scope. 👌️
+
+3.Block Scope
+ var declared inside a function is only single allocation.
+ Let keyword is used to maintain block specific scope it does not let to get inside blocks.
+ 
+
+
+
+------------------------------------Closure Property---------------------------------------
+|function inside a function and the scope of variables and function                       |
+|                                                                                         | 
+|//code                                                                                   | 
+|function functionname1(para1){                                                           |
+|    function functionname2(param2)                                                       |
+|{                                                                                        |      
+|   var sum = param1 + param 2;                                                           |
+|          return sum;                                                                    |
+|    }                                                                                    |
+|return functioname2;                                                                     |
+|}                                                                                        |
+|                                                                                         |
+|result = functionname1(param1)(param2);                                                  |
+|//output is in results.                                                                  |
+|_________________________________________________________________________________________|
+ 
+ 
+-----------------------Mutable and Immutable Behaviour in data types----------------------
+1.Mutable property(**array and Object)
+ Once changed in original reflects in refrenced.
+ Once changed in refrenced reflects in original.
+ 
+2.Immutable property(primitive data types)
+ Once changed in original doesnot reflects in refrenced.
+ Once changed in refrenced doesnot reflects in original.
+ 
+ 
+-----------------------------------Code Execution------------------------------------------
+-----------------------------------Async and Sync -----------------------------------------
+1.For each step in SYNC EXECUTION step waits for the result to come after which another step carries its job.
+D---slow  A --but simple
+
+2.For each step in ASYNC EXECUTION step  does not waits for the result to come after which another step carries its job.
+A--save time. D--harder to implement --result handling
+
+BLOCKING AND NON-BLOCKING TASK
+If a function has a delay in giving out the result or is a blocking task then we use callback:
+=========================CALLBACK=====================================
+Callback is a function which is passed as a argument to another function-used to handle asynchronous call results
+
+#coffeestory.js
+Callback has function error done
+#callBack_continue.js
+--1.callback with single args for failure.
+--2.with two args for success where 1st args must be a falsy value.
+
+
+
+
+
+-------------truthy/falsy value---------------------
+
+falsy = NaN,null,_ ,FALSE etc
+truthy = True,declaration.
